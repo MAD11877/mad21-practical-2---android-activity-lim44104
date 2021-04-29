@@ -1,4 +1,4 @@
-package sg.edu.np.madweek2;
+package sg.edu.np.mad.madpractical;
 
 import org.junit.Test;
 

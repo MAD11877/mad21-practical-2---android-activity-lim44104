@@ -1,4 +1,4 @@
-package sg.edu.np.madweek2;
+package sg.edu.np.mad.madpractical;
 
 public class User {
     private String name;
