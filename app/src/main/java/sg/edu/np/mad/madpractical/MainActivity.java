@@ -26,37 +26,31 @@ public class MainActivity extends AppCompatActivity {
                 false
         );
 
-        TextView userName = findViewById(R.id.userName);
+        TextView userName = findViewById(R.id.userName);    //define user name
         userName.setText(user.getName());
 
-        TextView userDescription = findViewById(R.id.userDescription);
+        TextView userDescription = findViewById(R.id.userDescription);  //define description
         userDescription.setText(user.getDescription());
 
-        Button followButton = findViewById(R.id.followButton);
+        Button followButton = findViewById(R.id.followButton);  //define follow button
 
-        if (user.isFollowed()) {
-            followButton.setText("Followed");
-        }
 
-        else {
-            followButton.setText("Follow");
-        }
 
-        followButton.setOnClickListener(new View.OnClickListener() {
+        followButton.setOnClickListener(new View.OnClickListener() {    //button event listener
             @Override
             public void onClick(View v) {
                 Log.v(TAG, "Button Pressed!");
 
-                if (user.isFollowed()) {
+                if (user.isFollowed()) {    //if false (haven't follow), set to false and set text to Follow
                     user.setFollowed(false);
                     followButton.setText("Follow");
-                    Log.v(TAG, "User is not Followed: " + String.valueOf(user.isFollowed()));
+                    Log.v(TAG, "User is not Followed.");
                 }
 
                 else {
-                    user.setFollowed(true);
+                    user.setFollowed(true); //if true (followed), set to true and set text to Followed
                     followButton.setText("Followed");
-                    Log.v(TAG, "User is Followed: " + String.valueOf(user.isFollowed()));
+                    Log.v(TAG, "User is Followed.");
                 }
             }
         });
