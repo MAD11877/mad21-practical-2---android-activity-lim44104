@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         Button followButton = findViewById(R.id.followButton);
 
         if (user.isFollowed()) {
-            followButton.setText("Unfollow");
+            followButton.setText("Followed");
         }
 
         else {
@@ -55,23 +55,12 @@ public class MainActivity extends AppCompatActivity {
 
                 else {
                     user.setFollowed(true);
-                    followButton.setText("Unfollow");
+                    followButton.setText("Followed");
                     Log.v(TAG, "User is Followed: " + String.valueOf(user.isFollowed()));
                 }
             }
         });
 
-        /*
-        Button button = findViewById(R.id.followButton);
-        button.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,MainActivity2.class);//jump to second page when button on click
-                startActivity(intent);
-            }
-        });
-
-         */
     }
 
     @Override

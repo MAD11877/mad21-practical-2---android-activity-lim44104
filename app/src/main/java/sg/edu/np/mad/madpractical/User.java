@@ -1,5 +1,7 @@
 package sg.edu.np.mad.madpractical;
 
+import android.service.autofill.AutofillService;
+
 public class User {
     public String name;
     public String description;
