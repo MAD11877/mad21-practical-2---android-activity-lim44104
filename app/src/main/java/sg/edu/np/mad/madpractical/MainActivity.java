@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.v(TAG,"Create");
 
-        Button button = findViewById(R.id.button);
+        Button button = findViewById(R.id.followButton);
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
